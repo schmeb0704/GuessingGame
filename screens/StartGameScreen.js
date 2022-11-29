@@ -11,6 +11,7 @@ import colors from "../constants/colors";
 
 import Card from "../components/Card";
 import Input from "../components/Input";
+import PrimaryButton from "../components/PrimaryButton";
 
 export default function StartGameScreen(){
   const [enteredValue, setEnteredValue] = React.useState("")
@@ -41,8 +42,13 @@ export default function StartGameScreen(){
         />
 
         <View style={styles.buttonContainer}>
-          <View style={styles.button}><Button title="Reset" color={colors.accent} /></View>
-          <View style={styles.button}><Button title="Confirm" color={colors.primary}/></View>
+        <PrimaryButton>
+          Reset
+        </PrimaryButton>
+        <PrimaryButton>
+          Confirm
+        </PrimaryButton>
+      
         </View>
       </Card>
     </View>
