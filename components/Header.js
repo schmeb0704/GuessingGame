@@ -5,6 +5,7 @@ import {
   StyleSheet,
   ProgressViewIOSComponent,
 } from "react-native"
+import colors from "../constants/colors"
 
 export default function Header(props){
   return(
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 90,
     paddingTop: 36,
-    backgroundColor: "#f7287b",
+    backgroundColor: colors.primary,
     alignItems: "center",
     justifyContent: "center"
   },
