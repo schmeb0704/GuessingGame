@@ -11,9 +11,10 @@ export default Input
 
 const styles =StyleSheet.create({
   input:{
-    height: 30,
+    height: 50,
     borderBottomWidth: 1,
     borderBottomColor: "grey",
-    marginVertical: 10
+    marginVertical: 10,
+    fontWeight: "bold"
   }
 })

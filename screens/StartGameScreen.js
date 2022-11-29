@@ -42,10 +42,10 @@ export default function StartGameScreen(){
         />
 
         <View style={styles.buttonContainer}>
-        <PrimaryButton>
+        <PrimaryButton style={{backgroundColor: colors.accent}}>
           Reset
         </PrimaryButton>
-        <PrimaryButton>
+        <PrimaryButton style={{backgroundColor: colors.primary}}>
           Confirm
         </PrimaryButton>
       
@@ -78,11 +78,10 @@ const styles = StyleSheet.create({
     maxWidth: "80%",
     alignItems: "center"
   },
-  button:{
-    width: 100
-  },
   input:{
     width: 50,
-    textAlign: "center"
+    textAlign: "center",
+    fontSize: 32,
+    color: "green"
   }
 })
