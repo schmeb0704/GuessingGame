@@ -7,18 +7,20 @@ import {
   Button
 } from "react-native"
 
+import Card from "../components/Card";
+
 export default function StartGameScreen(){
   return(
     <View style={styles.screen}>
       <Text style={styles.title}>Start a new Game</Text>
-      <View style={styles.inputContainer}>
+      <Card style={styles.inputContainer}>
         <Text>Select a number</Text>
         <TextInput />
         <View style={styles.buttonContainer}>
           <Button title="Reset" />
           <Button title="Confirm"/>
         </View>
-      </View>
+      </Card>
     </View>
   )
 }
@@ -35,14 +37,14 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingHorizontal: 15
   },
-  inputContainer:{
-    width: 300,
-    maxWidth: "80%",
-    alignItems: "center"
-  },
   title:{
     fontSize: 20,
     marginVertical: 10,
 
+  },
+  inputContainer:{
+    width: 300,
+    maxWidth: "80%",
+    alignItems: "center"
   }
 })
