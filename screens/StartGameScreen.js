@@ -3,7 +3,9 @@ import {
   View,
   StyleSheet,
   Text,
-  Button
+  Button,
+  TouchableWithoutFeedback,
+  Keyboard
 } from "react-native"
 import colors from "../constants/colors";
 
@@ -11,7 +13,18 @@ import Card from "../components/Card";
 import Input from "../components/Input";
 
 export default function StartGameScreen(){
+  const [enteredValue, setEnteredValue] = React.useState("")
+
+  function numberInputHandler(inputText){
+    setEnteredValue(inputText.replace(/[^0-9]/g, ""))
+  }
+
+
   return(
+    <TouchableWithoutFeedback onPress={()=> {
+      Keyboard.dismiss()
+    }}>
+
     <View style={styles.screen}>
       <Text style={styles.title}>Start a new Game</Text>
       <Card style={styles.inputContainer}>
@@ -22,7 +35,10 @@ export default function StartGameScreen(){
         autoCapitalize="none" 
         autoCorrect={false} 
         keyboardType="number-pad"
-        maxLength={2}/>
+        maxLength={2}
+        onChangeText={numberInputHandler}
+        value={enteredValue}
+        />
 
         <View style={styles.buttonContainer}>
           <View style={styles.button}><Button title="Reset" color={colors.accent} /></View>
@@ -30,6 +46,7 @@ export default function StartGameScreen(){
         </View>
       </Card>
     </View>
+    </TouchableWithoutFeedback>
   )
 }
 
