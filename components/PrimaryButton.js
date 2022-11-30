@@ -5,7 +5,7 @@ export default function PrimaryButton(props){
   return(
     <View style={{...styles.outerContainer, ...props.style}}>
       <Pressable 
-        onPress={()=>{alert("pressed")}} 
+        onPress={props.handlePress} 
         style={({pressed})=> pressed ? [styles.innerContainer, styles.pressed] : styles.innerContainer}
         android_ripple={{color: "gray"}}
       >
