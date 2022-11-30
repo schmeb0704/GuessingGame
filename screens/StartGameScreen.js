@@ -61,6 +61,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 10,
     alignItems: "center",
+    marginTop: 36
   },
   buttonContainer:{
     flexDirection: "row",
@@ -76,12 +77,13 @@ const styles = StyleSheet.create({
   inputContainer:{
     width: 300,
     maxWidth: "80%",
-    alignItems: "center"
+    alignItems: "center",
+    backgroundColor: colors.primary
   },
   input:{
     width: 50,
     textAlign: "center",
     fontSize: 32,
-    color: "green"
+    color: "white"
   }
 })
